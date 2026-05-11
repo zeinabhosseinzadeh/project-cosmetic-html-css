@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    direction: rtl;
+}
+:root {
+    --base-color: #ffbb46;
+}
+
+/* .content{
+    display: flex;
+    width: 90%;
+    margin: 20px auto;
+    justify-content: space-between;
+}
+
+.item{
+    width: 100px;
+    height: 100px;
+    background-color: gainsboro; 
+}
+
+@media screen and (max-width:600px) {
+    .content{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .item{
+        background-color: red;
+    }
+} */
+
+header{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 80px;
+    z-index: 10000;
+}
+header .container{
+    width: 90%;
+    margin: 0 auto;
+height: 100%;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+header nav .logo{
+    font-size: 25px;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all .5s;
+}
+header nav .logo:hover{
+    color: var(--base-color);
+}
+header nav ul{
+    display: flex;
+    gap: 100px;
+    
+}
+header nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    transition: all .5s;
+    font-weight: 900;
+}
+header nav ul li a:hover{
+    color: var(--base-color);
+}
+.slider{
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+.slider .img-box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+.slider .img-box img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-position: center;
+    opacity: 0;
+    transition: all .5s;
+}
+.slider .img-box img.active{
+    opacity: 1;
+}
+.slider #prev-slide ,
+.slider #next-slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    padding: 15px;
+    border-radius: 20px;
+    transition: all .5s;
+    cursor: pointer;
+    font-size: 20px;
+    left: 5%;
+}
+.slider #next-slide{
+    left: 90%;
+}
+
+.slider #prev-slide:hover ,
+.slider #next-slide:hover{
+    background-color: var(--base-color);
+}
